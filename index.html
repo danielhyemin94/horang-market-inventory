@@ -16,7 +16,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f5f1eb 0%, #ede7e0 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
             color: #6b7280;
         }
         
@@ -33,88 +33,78 @@
         .header {
             background: linear-gradient(135deg, #fed7aa, #fdba74);
             color: #92400e;
-            padding: 32px;
+            padding: 24px;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 2.2em;
+            font-size: 2em;
             margin-bottom: 8px;
             font-weight: 600;
         }
         
         .header p {
             opacity: 0.8;
-            font-size: 1.1em;
+            font-size: 1em;
         }
         
         .main-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 32px;
-            padding: 32px;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            padding: 20px;
         }
         
         .add-product {
             background: #fefcf9;
-            padding: 28px;
+            padding: 24px;
             border-radius: 20px;
             border: 1px solid #f3f0ea;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
         }
         
         .add-product h2 {
             color: #374151;
-            margin-bottom: 24px;
-            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-size: 1.2em;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
-        
-        .add-product h2::before {
-            content: '📦';
-            font-size: 1.2em;
         }
         
         .barcode-section {
             background: #fef3e7;
             padding: 20px;
             border-radius: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             border: 1px solid #fde68a;
         }
         
         .barcode-section h3 {
             color: #92400e;
-            font-size: 1.1em;
+            font-size: 1em;
             margin-bottom: 16px;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .barcode-section h3::before {
-            content: '📷';
-            font-size: 1em;
+            text-align: center;
         }
         
         .barcode-input {
             display: flex;
+            flex-direction: column;
             gap: 12px;
             margin-bottom: 16px;
         }
         
         .barcode-input input {
-            flex: 1;
             padding: 14px 16px;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            font-size: 15px;
+            font-size: 16px;
             background: white;
             color: #374151;
+            width: 100%;
         }
         
         .barcode-input input:focus {
@@ -125,8 +115,8 @@
         
         .camera-container {
             width: 100%;
-            max-width: 280px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin: 12px auto;
             border-radius: 12px;
             overflow: hidden;
             background: #111827;
@@ -135,11 +125,12 @@
         
         #camera {
             width: 100%;
-            height: 180px;
+            height: 200px;
+            object-fit: cover;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
         
         .form-group label {
@@ -155,7 +146,7 @@
             padding: 14px 16px;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            font-size: 15px;
+            font-size: 16px;
             background: white;
             color: #374151;
             transition: all 0.2s;
@@ -174,7 +165,7 @@
             padding: 14px 24px;
             border-radius: 12px;
             cursor: pointer;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 500;
             transition: all 0.2s;
             width: 100%;
@@ -188,7 +179,7 @@
         
         .btn-scanner {
             background: linear-gradient(135deg, #3b82f6, #2563eb);
-            margin-bottom: 12px;
+            margin-top: 8px;
             box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
         }
         
@@ -199,7 +190,7 @@
         
         .inventory-list {
             background: #fefcf9;
-            padding: 28px;
+            padding: 24px;
             border-radius: 20px;
             border: 1px solid #f3f0ea;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -207,41 +198,33 @@
         
         .inventory-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 24px;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 16px;
+            margin-bottom: 24px;
         }
         
         .inventory-header h2 {
             color: #374151;
-            font-size: 1.3em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .inventory-header h2::before {
-            content: '📊';
             font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
         }
         
         .search-controls {
             display: flex;
+            flex-direction: column;
             gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
+            width: 100%;
         }
         
         .search-box {
             padding: 12px 16px;
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            width: 220px;
             background: white;
             color: #374151;
+            width: 100%;
+            font-size: 16px;
         }
         
         .search-box:focus {
@@ -253,7 +236,7 @@
         .product-card {
             background: white;
             margin-bottom: 16px;
-            padding: 24px;
+            padding: 20px;
             border-radius: 16px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             border: 1px solid #f3f4f6;
@@ -272,9 +255,10 @@
         
         .product-header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            gap: 8px;
             margin-bottom: 16px;
+            text-align: center;
         }
         
         .product-name {
@@ -285,17 +269,12 @@
         
         .barcode-display {
             font-family: 'Courier New', monospace;
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: #9ca3af;
-            margin-top: 4px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 4px;
-        }
-        
-        .barcode-display::before {
-            content: '▦';
-            font-size: 0.9em;
         }
         
         .stock-status {
@@ -303,6 +282,9 @@
             border-radius: 20px;
             font-size: 0.85em;
             font-weight: 500;
+            text-align: center;
+            margin: 0 auto;
+            width: fit-content;
         }
         
         .stock-ok { 
@@ -320,7 +302,7 @@
         
         .product-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
             margin-bottom: 20px;
         }
@@ -334,7 +316,7 @@
         }
         
         .detail-label {
-            font-size: 0.75em;
+            font-size: 0.7em;
             color: #9ca3af;
             margin-bottom: 4px;
             font-weight: 500;
@@ -349,18 +331,20 @@
         }
         
         .product-actions {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
-            flex-wrap: wrap;
         }
         
         .btn-small {
-            padding: 10px 16px;
+            padding: 10px 12px;
             font-size: 13px;
-            flex: 1;
-            min-width: 90px;
             border-radius: 10px;
             font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: white;
         }
         
         .btn-success { 
@@ -382,14 +366,14 @@
         
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 32px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
         }
         
         .stat-card {
             background: white;
-            padding: 24px;
+            padding: 20px;
             border-radius: 16px;
             text-align: center;
             border: 1px solid #f3f4f6;
@@ -397,32 +381,32 @@
         }
         
         .stat-number {
-            font-size: 2.2em;
+            font-size: 1.8em;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
             color: #f97316;
         }
         
         .stat-label {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #6b7280;
             font-weight: 500;
         }
         
         .empty-state {
             text-align: center;
-            padding: 48px 24px;
+            padding: 40px 20px;
             color: #9ca3af;
         }
         
         .empty-state .icon {
-            font-size: 4em;
+            font-size: 3em;
             margin-bottom: 16px;
             opacity: 0.5;
         }
         
         .empty-state h3 {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-bottom: 8px;
             color: #6b7280;
         }
@@ -441,8 +425,8 @@
         
         .modal-content {
             background-color: #fefcf9;
-            margin: 5% auto;
-            padding: 32px;
+            margin: 10% auto;
+            padding: 24px;
             border-radius: 20px;
             width: 90%;
             max-width: 500px;
@@ -473,13 +457,13 @@
         }
         
         .barcode-scanner-modes {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
             margin-bottom: 16px;
         }
         
         .mode-btn {
-            flex: 1;
             padding: 12px;
             border: 1px solid #e5e7eb;
             background: white;
@@ -489,6 +473,7 @@
             font-size: 14px;
             font-weight: 500;
             color: #6b7280;
+            text-align: center;
         }
         
         .mode-btn.active {
@@ -498,31 +483,89 @@
             box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2);
         }
         
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-                gap: 24px;
-                padding: 24px;
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .container {
+                margin: 20px auto;
             }
             
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+            .header {
+                padding: 32px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr 2fr;
+                gap: 32px;
+                padding: 32px;
+            }
+            
+            .add-product {
+                margin-bottom: 0;
+            }
+            
+            .inventory-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .inventory-header h2 {
+                text-align: left;
+                font-size: 1.3em;
             }
             
             .search-controls {
-                width: 100%;
+                flex-direction: row;
+                width: auto;
             }
             
             .search-box {
-                width: 100%;
+                width: 220px;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            
+            .stat-number {
+                font-size: 2.2em;
+                margin-bottom: 8px;
+            }
+            
+            .stat-label {
+                font-size: 0.9em;
+            }
+            
+            .product-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+            }
+            
+            .stock-status {
+                margin: 0;
+            }
+            
+            .product-details {
+                grid-template-columns: repeat(3, 1fr);
             }
             
             .product-actions {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
             }
             
-            .btn-small {
-                min-width: auto;
+            .barcode-input {
+                flex-direction: row;
+            }
+            
+            .barcode-input input {
+                flex: 1;
             }
         }
     </style>
@@ -530,7 +573,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Korean Market Inventory</h1>
+            <h1>🏪 Korean Market Inventory</h1>
             <p>Smart inventory management with barcode scanning</p>
         </div>
         
@@ -555,10 +598,10 @@
         
         <div class="main-content">
             <div class="add-product">
-                <h2>Add Product</h2>
+                <h2>📦 Add Product</h2>
                 
                 <div class="barcode-section">
-                    <h3>Barcode Scanner</h3>
+                    <h3>📷 Barcode Scanner</h3>
                     <div class="barcode-scanner-modes">
                         <button class="mode-btn active" id="manualMode">Manual Entry</button>
                         <button class="mode-btn" id="cameraMode">Camera Scan</button>
@@ -566,7 +609,7 @@
                     
                     <div class="barcode-input">
                         <input type="text" id="barcodeInput" placeholder="Scan or enter barcode manually">
-                        <button class="btn btn-scanner" id="scanBtn">Scan</button>
+                        <button class="btn btn-scanner" id="scanBtn">📷 Scan</button>
                     </div>
                     
                     <div class="camera-container" id="cameraContainer">
@@ -613,23 +656,23 @@
                         <label>Supplier</label>
                         <input type="text" id="supplier" placeholder="e.g., KFT Wholesale">
                     </div>
-                    <button type="submit" class="btn">Add Product</button>
+                    <button type="submit" class="btn">📦 Add Product</button>
                 </form>
             </div>
             
             <div class="inventory-list">
                 <div class="inventory-header">
-                    <h2>Current Inventory</h2>
+                    <h2>📊 Current Inventory</h2>
                     <div class="search-controls">
                         <input type="text" class="search-box" id="searchBox" placeholder="Search products...">
-                        <button class="btn btn-scanner" id="quickScanBtn">Quick Scan</button>
+                        <button class="btn btn-scanner" id="quickScanBtn">🔍 Quick Scan</button>
                     </div>
                 </div>
                 <div id="productList">
                     <div class="empty-state">
-                        <div class="icon">▦</div>
+                        <div class="icon">📦</div>
                         <h3>No products registered yet</h3>
-                        <p>Add your first product using the form on the left</p>
+                        <p>Add your first product using the form above</p>
                     </div>
                 </div>
             </div>
@@ -645,55 +688,111 @@
     </div>
 
     <script>
+        console.log('App starting...');
+        
         class InventoryManager {
             constructor() {
-                this.products = JSON.parse(localStorage.getItem('koreanMarketInventory')) || [];
+                console.log('InventoryManager constructor called');
+                this.products = this.loadData();
                 this.scanner = null;
                 this.scanMode = 'add';
                 this.initializeEventListeners();
                 this.renderProducts();
                 this.updateStats();
+                console.log('Initial products:', this.products);
+            }
+            
+            loadData() {
+                try {
+                    const data = localStorage.getItem('koreanMarketInventory');
+                    console.log('Loading data from localStorage:', data);
+                    return data ? JSON.parse(data) : [];
+                } catch (error) {
+                    console.error('Error loading data:', error);
+                    return [];
+                }
+            }
+            
+            saveData() {
+                try {
+                    localStorage.setItem('koreanMarketInventory', JSON.stringify(this.products));
+                    console.log('Data saved to localStorage:', this.products);
+                } catch (error) {
+                    console.error('Error saving data:', error);
+                }
             }
             
             initializeEventListeners() {
-                document.getElementById('productForm').addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    this.addProduct();
-                });
+                console.log('Setting up event listeners...');
                 
-                document.getElementById('searchBox').addEventListener('input', (e) => {
-                    this.searchProducts(e.target.value);
-                });
+                const form = document.getElementById('productForm');
+                if (form) {
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        console.log('Form submitted');
+                        this.addProduct();
+                    });
+                }
                 
-                document.getElementById('scanBtn').addEventListener('click', () => {
-                    this.toggleScanner();
-                });
+                const searchBox = document.getElementById('searchBox');
+                if (searchBox) {
+                    searchBox.addEventListener('input', (e) => {
+                        this.searchProducts(e.target.value);
+                    });
+                }
                 
-                document.getElementById('quickScanBtn').addEventListener('click', () => {
-                    this.quickScan();
-                });
+                const scanBtn = document.getElementById('scanBtn');
+                if (scanBtn) {
+                    scanBtn.addEventListener('click', () => {
+                        this.toggleScanner();
+                    });
+                }
                 
-                document.getElementById('manualMode').addEventListener('click', () => {
-                    this.setMode('manual');
-                });
+                const quickScanBtn = document.getElementById('quickScanBtn');
+                if (quickScanBtn) {
+                    quickScanBtn.addEventListener('click', () => {
+                        this.quickScan();
+                    });
+                }
                 
-                document.getElementById('cameraMode').addEventListener('click', () => {
-                    this.setMode('camera');
-                });
+                const manualMode = document.getElementById('manualMode');
+                if (manualMode) {
+                    manualMode.addEventListener('click', () => {
+                        this.setMode('manual');
+                    });
+                }
                 
-                document.getElementById('barcodeInput').addEventListener('input', (e) => {
-                    document.getElementById('productBarcode').value = e.target.value;
-                });
+                const cameraMode = document.getElementById('cameraMode');
+                if (cameraMode) {
+                    cameraMode.addEventListener('click', () => {
+                        this.setMode('camera');
+                    });
+                }
                 
-                document.getElementById('closeModal').addEventListener('click', () => {
-                    this.closeModal();
-                });
+                const barcodeInput = document.getElementById('barcodeInput');
+                if (barcodeInput) {
+                    barcodeInput.addEventListener('input', (e) => {
+                        const productBarcode = document.getElementById('productBarcode');
+                        if (productBarcode) {
+                            productBarcode.value = e.target.value;
+                        }
+                    });
+                }
+                
+                const closeModal = document.getElementById('closeModal');
+                if (closeModal) {
+                    closeModal.addEventListener('click', () => {
+                        this.closeModal();
+                    });
+                }
                 
                 window.addEventListener('click', (e) => {
                     if (e.target === document.getElementById('productModal')) {
                         this.closeModal();
                     }
                 });
+                
+                console.log('Event listeners set up successfully');
             }
             
             setMode(mode) {
@@ -702,14 +801,14 @@
                 const cameraContainer = document.getElementById('cameraContainer');
                 
                 if (mode === 'manual') {
-                    manualBtn.classList.add('active');
-                    cameraBtn.classList.remove('active');
-                    cameraContainer.style.display = 'none';
+                    manualBtn?.classList.add('active');
+                    cameraBtn?.classList.remove('active');
+                    if (cameraContainer) cameraContainer.style.display = 'none';
                     this.stopScanner();
                 } else {
-                    manualBtn.classList.remove('active');
-                    cameraBtn.classList.add('active');
-                    cameraContainer.style.display = 'block';
+                    manualBtn?.classList.remove('active');
+                    cameraBtn?.classList.add('active');
+                    if (cameraContainer) cameraContainer.style.display = 'block';
                 }
             }
             
@@ -719,28 +818,35 @@
                 
                 if (this.scanner) {
                     this.stopScanner();
-                    btn.textContent = 'Scan';
-                    btn.classList.remove('active');
-                    cameraContainer.style.display = 'none';
+                    if (btn) btn.textContent = '📷 Scan';
+                    btn?.classList.remove('active');
+                    if (cameraContainer) cameraContainer.style.display = 'none';
                 } else {
                     this.startScanner();
-                    btn.textContent = 'Stop';
-                    btn.classList.add('active');
-                    cameraContainer.style.display = 'block';
+                    if (btn) btn.textContent = '⏹️ Stop';
+                    btn?.classList.add('active');
+                    if (cameraContainer) cameraContainer.style.display = 'block';
                     this.setMode('camera');
                 }
             }
             
             startScanner() {
+                console.log('Starting scanner...');
                 this.scanMode = 'add';
+                
+                if (typeof Quagga === 'undefined') {
+                    this.showNotification('Barcode scanner library not loaded', 'error');
+                    return;
+                }
+                
                 Quagga.init({
                     inputStream: {
                         name: "Live",
                         type: "LiveStream",
                         target: document.querySelector('#camera'),
                         constraints: {
-                            width: 280,
-                            height: 180,
+                            width: { min: 640 },
+                            height: { min: 480 },
                             facingMode: "environment"
                         },
                     },
@@ -754,27 +860,32 @@
                     },
                 }, (err) => {
                     if (err) {
-                        console.log(err);
-                        this.showNotification('Camera access denied or not available', 'error');
+                        console.error('Scanner initialization error:', err);
+                        this.showNotification('Camera access denied or not available. Please use manual entry.', 'error');
                         return;
                     }
+                    console.log('Scanner initialized successfully');
                     Quagga.start();
                     this.scanner = true;
                 });
 
                 Quagga.onDetected((data) => {
                     const barcode = data.codeResult.code;
-                    document.getElementById('barcodeInput').value = barcode;
-                    document.getElementById('productBarcode').value = barcode;
+                    console.log('Barcode detected:', barcode);
+                    const barcodeInput = document.getElementById('barcodeInput');
+                    const productBarcode = document.getElementById('productBarcode');
+                    if (barcodeInput) barcodeInput.value = barcode;
+                    if (productBarcode) productBarcode.value = barcode;
                     this.stopScanner();
                     this.showNotification(`Barcode scanned: ${barcode}`, 'success');
                 });
             }
             
             stopScanner() {
-                if (this.scanner) {
+                if (this.scanner && typeof Quagga !== 'undefined') {
                     Quagga.stop();
                     this.scanner = null;
+                    console.log('Scanner stopped');
                 }
             }
             
@@ -787,32 +898,45 @@
                 const modal = document.getElementById('productModal');
                 const modalContent = document.getElementById('modalContent');
                 
-                modalContent.innerHTML = `
-                    <h2>Quick Barcode Lookup</h2>
-                    <div class="barcode-input">
-                        <input type="text" id="quickBarcodeInput" placeholder="Scan or enter barcode">
-                        <button class="btn btn-scanner" id="quickScanCameraBtn">Scan</button>
-                    </div>
-                    <div class="camera-container" id="quickCameraContainer">
-                        <div id="quickCamera"></div>
-                    </div>
-                    <div id="quickResults"></div>
-                `;
+                if (modalContent) {
+                    modalContent.innerHTML = `
+                        <h2>🔍 Quick Barcode Lookup</h2>
+                        <div class="barcode-input">
+                            <input type="text" id="quickBarcodeInput" placeholder="Scan or enter barcode">
+                            <button class="btn btn-scanner" id="quickScanCameraBtn">📷 Scan</button>
+                        </div>
+                        <div class="camera-container" id="quickCameraContainer">
+                            <div id="quickCamera"></div>
+                        </div>
+                        <div id="quickResults"></div>
+                    `;
+                }
                 
-                modal.style.display = 'block';
+                if (modal) modal.style.display = 'block';
                 
-                document.getElementById('quickScanCameraBtn').addEventListener('click', () => {
-                    this.startQuickCameraScanner();
-                });
+                const quickScanBtn = document.getElementById('quickScanCameraBtn');
+                if (quickScanBtn) {
+                    quickScanBtn.addEventListener('click', () => {
+                        this.startQuickCameraScanner();
+                    });
+                }
                 
-                document.getElementById('quickBarcodeInput').addEventListener('input', (e) => {
-                    this.lookupBarcode(e.target.value);
-                });
+                const quickBarcodeInput = document.getElementById('quickBarcodeInput');
+                if (quickBarcodeInput) {
+                    quickBarcodeInput.addEventListener('input', (e) => {
+                        this.lookupBarcode(e.target.value);
+                    });
+                }
             }
             
             startQuickCameraScanner() {
                 const container = document.getElementById('quickCameraContainer');
-                container.style.display = 'block';
+                if (container) container.style.display = 'block';
+                
+                if (typeof Quagga === 'undefined') {
+                    this.showNotification('Barcode scanner library not loaded', 'error');
+                    return;
+                }
                 
                 Quagga.init({
                     inputStream: {
@@ -820,8 +944,8 @@
                         type: "LiveStream",
                         target: document.querySelector('#quickCamera'),
                         constraints: {
-                            width: 280,
-                            height: 180,
+                            width: { min: 640 },
+                            height: { min: 480 },
                             facingMode: "environment"
                         },
                     },
@@ -835,7 +959,7 @@
                     },
                 }, (err) => {
                     if (err) {
-                        console.log(err);
+                        console.error('Quick scanner error:', err);
                         return;
                     }
                     Quagga.start();
@@ -843,10 +967,11 @@
 
                 Quagga.onDetected((data) => {
                     const barcode = data.codeResult.code;
-                    document.getElementById('quickBarcodeInput').value = barcode;
+                    const quickBarcodeInput = document.getElementById('quickBarcodeInput');
+                    if (quickBarcodeInput) quickBarcodeInput.value = barcode;
                     this.lookupBarcode(barcode);
                     Quagga.stop();
-                    container.style.display = 'none';
+                    if (container) container.style.display = 'none';
                 });
             }
             
@@ -856,6 +981,8 @@
                 const product = this.products.find(p => p.barcode === barcode);
                 const resultsDiv = document.getElementById('quickResults');
                 
+                if (!resultsDiv) return;
+                
                 if (product) {
                     const status = this.getStockStatus(product);
                     resultsDiv.innerHTML = `
@@ -863,7 +990,7 @@
                             <div class="product-header">
                                 <div class="product-name">
                                     ${product.name}
-                                    <div class="barcode-display">${product.barcode}</div>
+                                    <div class="barcode-display">📊 ${product.barcode}</div>
                                 </div>
                                 <span class="stock-status ${status.class}">${status.text}</span>
                             </div>
@@ -874,7 +1001,7 @@
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">Unit Price</div>
-                                    <div class="detail-value">$${product.price.toFixed(2)}</div>
+                                    <div class="detail-value">${product.price.toFixed(2)}</div>
                                 </div>
                                 <div class="detail-item">
                                     <div class="detail-label">Category</div>
@@ -894,4 +1021,434 @@
                 } else {
                     resultsDiv.innerHTML = `
                         <div class="empty-state">
-                            <div
+                            <div class="icon">❌</div>
+                            <h3>Product Not Found</h3>
+                            <p>Barcode: ${barcode}</p>
+                            <p>This product is not in your inventory.</p>
+                        </div>
+                    `;
+                }
+            }
+            
+            closeModal() {
+                const modal = document.getElementById('productModal');
+                if (modal) modal.style.display = 'none';
+                if (typeof Quagga !== 'undefined') {
+                    Quagga.stop();
+                }
+            }
+            
+            addProduct() {
+                console.log('Adding product...');
+                
+                const barcode = document.getElementById('productBarcode')?.value || '';
+                const name = document.getElementById('productName')?.value || '';
+                const category = document.getElementById('category')?.value || '';
+                const currentStock = parseInt(document.getElementById('currentStock')?.value || '0');
+                const minStock = parseInt(document.getElementById('minStock')?.value || '0');
+                const price = parseFloat(document.getElementById('price')?.value || '0');
+                const supplier = document.getElementById('supplier')?.value || '';
+                
+                console.log('Form values:', { barcode, name, category, currentStock, minStock, price, supplier });
+                
+                // Validation
+                if (!name) {
+                    this.showNotification('Please enter a product name', 'error');
+                    return;
+                }
+                
+                if (!category) {
+                    this.showNotification('Please select a category', 'error');
+                    return;
+                }
+                
+                if (isNaN(currentStock) || currentStock < 0) {
+                    this.showNotification('Please enter a valid current stock', 'error');
+                    return;
+                }
+                
+                if (isNaN(minStock) || minStock < 0) {
+                    this.showNotification('Please enter a valid minimum stock', 'error');
+                    return;
+                }
+                
+                if (isNaN(price) || price < 0) {
+                    this.showNotification('Please enter a valid price', 'error');
+                    return;
+                }
+                
+                // Check if barcode already exists
+                if (barcode && this.products.find(p => p.barcode === barcode)) {
+                    this.showNotification('A product with this barcode already exists!', 'error');
+                    return;
+                }
+                
+                const product = {
+                    id: Date.now() + Math.random(),
+                    barcode: barcode || null,
+                    name: name,
+                    category: category,
+                    currentStock: currentStock,
+                    minStock: minStock,
+                    price: price,
+                    supplier: supplier,
+                    dateAdded: new Date().toLocaleDateString()
+                };
+                
+                console.log('New product:', product);
+                
+                this.products.push(product);
+                this.saveData();
+                this.renderProducts();
+                this.updateStats();
+                
+                // Reset form
+                const form = document.getElementById('productForm');
+                if (form) form.reset();
+                const barcodeInput = document.getElementById('barcodeInput');
+                if (barcodeInput) barcodeInput.value = '';
+                
+                this.showNotification('Product added successfully! 🎉', 'success');
+                console.log('Product added successfully, total products:', this.products.length);
+            }
+            
+            updateStock(id, change) {
+                console.log('Updating stock for product ID:', id, 'change:', change);
+                const product = this.products.find(p => p.id === id);
+                if (product) {
+                    product.currentStock = Math.max(0, product.currentStock + change);
+                    this.saveData();
+                    this.renderProducts();
+                    this.updateStats();
+                    
+                    if (product.currentStock <= product.minStock && product.currentStock > 0) {
+                        this.showNotification(`⚠️ ${product.name} is running low!`, 'warning');
+                    } else if (product.currentStock === 0) {
+                        this.showNotification(`❌ ${product.name} is out of stock!`, 'error');
+                    }
+                } else {
+                    console.error('Product not found with ID:', id);
+                }
+            }
+            
+            deleteProduct(id) {
+                if (confirm('Are you sure you want to delete this product?')) {
+                    this.products = this.products.filter(p => p.id !== id);
+                    this.saveData();
+                    this.renderProducts();
+                    this.updateStats();
+                    this.showNotification('Product deleted successfully.', 'info');
+                }
+            }
+            
+            showProductInfo(id) {
+                const product = this.products.find(p => p.id === id);
+                if (!product) return;
+                
+                const modal = document.getElementById('productModal');
+                const modalContent = document.getElementById('modalContent');
+                const status = this.getStockStatus(product);
+                
+                if (modalContent) {
+                    modalContent.innerHTML = `
+                        <h2>📦 Product Information</h2>
+                        <div class="product-card">
+                            <div class="product-header">
+                                <div class="product-name">
+                                    ${product.name}
+                                    ${product.barcode ? `<div class="barcode-display">📊 ${product.barcode}</div>` : ''}
+                                </div>
+                                <span class="stock-status ${status.class}">${status.text}</span>
+                            </div>
+                            <div class="product-details">
+                                <div class="detail-item">
+                                    <div class="detail-label">Current Stock</div>
+                                    <div class="detail-value">${product.currentStock}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Minimum Stock</div>
+                                    <div class="detail-value">${product.minStock}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Unit Price</div>
+                                    <div class="detail-value">${product.price.toFixed(2)}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Category</div>
+                                    <div class="detail-value">${product.category}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Supplier</div>
+                                    <div class="detail-value">${product.supplier || 'N/A'}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Total Value</div>
+                                    <div class="detail-value">${(product.currentStock * product.price).toFixed(2)}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Date Added</div>
+                                    <div class="detail-value">${product.dateAdded}</div>
+                                </div>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-small btn-success" onclick="inventoryManager.updateStock(${product.id}, 1); inventoryManager.closeModal();">
+                                    + Add Stock
+                                </button>
+                                <button class="btn btn-small btn-warning" onclick="inventoryManager.updateStock(${product.id}, -1); inventoryManager.closeModal();">
+                                    - Remove Stock
+                                </button>
+                                <button class="btn btn-small btn-danger" onclick="inventoryManager.deleteProduct(${product.id}); inventoryManager.closeModal();">
+                                    🗑️ Delete
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                if (modal) modal.style.display = 'block';
+            }
+            
+            getStockStatus(product) {
+                if (product.currentStock === 0) return { class: 'stock-out', text: 'Out of Stock' };
+                if (product.currentStock <= product.minStock) return { class: 'stock-low', text: 'Low Stock' };
+                return { class: 'stock-ok', text: 'In Stock' };
+            }
+            
+            renderProducts(productsToRender = this.products) {
+                const container = document.getElementById('productList');
+                if (!container) return;
+                
+                console.log('Rendering products:', productsToRender.length);
+                
+                if (productsToRender.length === 0) {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <div class="icon">📦</div>
+                            <h3>No products found</h3>
+                            <p>Add new products or adjust your search</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = productsToRender.map(product => {
+                    const status = this.getStockStatus(product);
+                    const isLowStock = product.currentStock <= product.minStock;
+                    
+                    return `
+                        <div class="product-card ${isLowStock ? 'low-stock' : ''}">
+                            <div class="product-header">
+                                <div class="product-name">
+                                    ${product.name}
+                                    ${product.barcode ? `<div class="barcode-display">📊 ${product.barcode}</div>` : ''}
+                                </div>
+                                <span class="stock-status ${status.class}">${status.text}</span>
+                            </div>
+                            
+                            <div class="product-details">
+                                <div class="detail-item">
+                                    <div class="detail-label">Current Stock</div>
+                                    <div class="detail-value">${product.currentStock}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Min Stock</div>
+                                    <div class="detail-value">${product.minStock}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Unit Price</div>
+                                    <div class="detail-value">${product.price.toFixed(2)}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Category</div>
+                                    <div class="detail-value">${product.category}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Supplier</div>
+                                    <div class="detail-value">${product.supplier || 'N/A'}</div>
+                                </div>
+                                <div class="detail-item">
+                                    <div class="detail-label">Total Value</div>
+                                    <div class="detail-value">${(product.currentStock * product.price).toFixed(2)}</div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-actions">
+                                <button class="btn btn-small btn-success" onclick="inventoryManager.updateStock(${product.id}, 1)">
+                                    + Add
+                                </button>
+                                <button class="btn btn-small btn-warning" onclick="inventoryManager.updateStock(${product.id}, -1)">
+                                    - Sell
+                                </button>
+                                <button class="btn btn-small btn-info" onclick="inventoryManager.showProductInfo(${product.id})">
+                                    ℹ️ Info
+                                </button>
+                                <button class="btn btn-small btn-danger" onclick="inventoryManager.deleteProduct(${product.id})">
+                                    🗑️ Delete
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+                
+                console.log('Products rendered successfully');
+            }
+            
+            updateStats() {
+                const totalProducts = this.products.length;
+                const lowStockItems = this.products.filter(p => p.currentStock <= p.minStock && p.currentStock > 0).length;
+                const outOfStockItems = this.products.filter(p => p.currentStock === 0).length;
+                const totalValue = this.products.reduce((sum, p) => sum + (p.currentStock * p.price), 0);
+                
+                const totalProductsEl = document.getElementById('totalProducts');
+                const lowStockItemsEl = document.getElementById('lowStockItems');
+                const outOfStockItemsEl = document.getElementById('outOfStockItems');
+                const totalValueEl = document.getElementById('totalValue');
+                
+                if (totalProductsEl) totalProductsEl.textContent = totalProducts;
+                if (lowStockItemsEl) lowStockItemsEl.textContent = lowStockItems;
+                if (outOfStockItemsEl) outOfStockItemsEl.textContent = outOfStockItems;
+                if (totalValueEl) totalValueEl.textContent = `${totalValue.toFixed(2)}`;
+                
+                console.log('Stats updated:', { totalProducts, lowStockItems, outOfStockItems, totalValue });
+            }
+            
+            searchProducts(query) {
+                if (!query) {
+                    this.renderProducts();
+                    return;
+                }
+                
+                const filtered = this.products.filter(product => 
+                    product.name.toLowerCase().includes(query.toLowerCase()) ||
+                    product.category.toLowerCase().includes(query.toLowerCase()) ||
+                    (product.supplier && product.supplier.toLowerCase().includes(query.toLowerCase())) ||
+                    (product.barcode && product.barcode.includes(query))
+                );
+                
+                this.renderProducts(filtered);
+            }
+            
+            showNotification(message, type = 'info') {
+                console.log('Notification:', message, type);
+                const notification = document.createElement('div');
+                const colors = {
+                    success: '#10b981',
+                    warning: '#f59e0b',
+                    error: '#ef4444',
+                    info: '#6366f1'
+                };
+                
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 24px;
+                    right: 24px;
+                    background: ${colors[type] || colors.info};
+                    color: white;
+                    padding: 16px 24px;
+                    border-radius: 12px;
+                    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+                    z-index: 1001;
+                    font-weight: 500;
+                    max-width: 320px;
+                    animation: slideIn 0.3s ease-out;
+                    backdrop-filter: blur(8px);
+                `;
+                
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease-in';
+                    setTimeout(() => notification.remove(), 300);
+                }, 3000);
+            }
+        }
+        
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize app
+        let inventoryManager;
+        
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing app...');
+            inventoryManager = new InventoryManager();
+            
+            // Demo data function
+            function addDemoData() {
+                const demoProducts = [
+                    { 
+                        name: 'Kimchi', 
+                        category: 'Refrigerated', 
+                        currentStock: 15, 
+                        minStock: 5, 
+                        price: 8.99, 
+                        supplier: 'KFT Wholesale',
+                        barcode: '1234567890123'
+                    },
+                    { 
+                        name: 'Shin Ramyun', 
+                        category: 'Noodles', 
+                        currentStock: 2, 
+                        minStock: 10, 
+                        price: 1.50, 
+                        supplier: 'Korea Food Trading',
+                        barcode: '8801043001441'
+                    },
+                    { 
+                        name: 'Gochujang', 
+                        category: 'Seasonings', 
+                        currentStock: 8, 
+                        minStock: 3, 
+                        price: 4.99, 
+                        supplier: 'Manna Food',
+                        barcode: '8801056412345'
+                    }
+                ];
+                
+                if (inventoryManager.products.length === 0) {
+                    demoProducts.forEach(product => {
+                        inventoryManager.products.push({
+                            ...product,
+                            id: Date.now() + Math.random(),
+                            dateAdded: new Date().toLocaleDateString()
+                        });
+                    });
+                    inventoryManager.saveData();
+                    inventoryManager.renderProducts();
+                    inventoryManager.updateStats();
+                    inventoryManager.showNotification('Demo data added successfully!', 'success');
+                }
+            }
+            
+            // Check for demo data on first load
+            setTimeout(() => {
+                if (inventoryManager.products.length === 0 && confirm('First time using this app? Would you like to add some demo data?')) {
+                    addDemoData();
+                }
+            }, 1000);
+        });
+        
+        // Fallback initialization if DOMContentLoaded already fired
+        if (document.readyState === 'loading') {
+            // DOM is still loading, wait for DOMContentLoaded
+        } else {
+            // DOM is already loaded
+            console.log('DOM already loaded, initializing app immediately...');
+            inventoryManager = new InventoryManager();
+        }
+    </script>
+</body>
+</html>
